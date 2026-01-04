@@ -11,15 +11,6 @@ export default defineConfig({
   build: {
     // Target modern browsers for better performance
     target: 'es2020',
-    // Enable minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove console logs in production
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-      },
-    },
     rollupOptions: {
       output: {
         // Optimized chunk splitting
