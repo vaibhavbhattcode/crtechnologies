@@ -228,7 +228,6 @@ const WebDevelopment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ delay: index * 0.05, duration: 0.3, ease: 'easeOut' }}
-                viewport={{ once: true, margin: '-50px' }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
               >
                 <div className="h-32 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
@@ -267,7 +266,6 @@ const WebDevelopment = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ delay: index * 0.05, duration: 0.3, ease: 'easeOut' }}
-                viewport={{ once: true, margin: '-50px' }}
                 className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100 group"
               >
                 <div className={`w-16 h-16 ${tech.bgColor || 'bg-gray-50'} rounded-xl mb-4 flex items-center justify-center p-3 group-hover:scale-110 transition-transform duration-300`}>
@@ -319,7 +317,6 @@ const WebDevelopment = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ delay: index * 0.05, duration: 0.3, ease: 'easeOut' }}
-                viewport={{ once: true, margin: '-50px' }}
                   className="flex items-start space-x-4 bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
                 >
                   <div className="w-8 h-8 bg-yellow-300 text-gray-900 rounded-full flex items-center justify-center font-bold flex-shrink-0">
