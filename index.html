@@ -2,71 +2,235 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     
+    <!-- DNS Prefetch & Preconnect for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    
+    <!-- Preload critical fonts with font-display swap for faster rendering -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+    
     <!-- Primary Meta Tags -->
-    <meta name="title" content="CR Technologies - Leading IT Solutions Provider" />
-    <meta name="description" content="Transform your business with cutting-edge IT solutions. Professional web development, mobile apps, cloud services, AI solutions, data analytics, and cybersecurity services." />
-    <meta name="keywords" content="IT solutions, web development, mobile app development, cloud services, AI solutions, data analytics, cybersecurity, software development, digital transformation" />
+    <meta name="title" content="CR Technologies - Premium IT Solutions & Digital Transformation" />
+    <meta name="description" content="CR Technologies delivers enterprise-grade IT solutions: Web Development, Mobile Apps, Cloud Services, AI/ML Solutions, Data Analytics & Cybersecurity. Trusted by 200+ clients worldwide. ISO 27001 certified." />
+    <meta name="keywords" content="IT solutions India, web development company, mobile app development, cloud migration services, AI solutions, machine learning, data analytics, cybersecurity services, enterprise software development, digital transformation, React development, Node.js experts, AWS partners" />
     <meta name="author" content="CR Technologies" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="IN-KA" />
+    <meta name="geo.placename" content="Bangalore" />
+    <meta name="geo.position" content="12.9716;77.5946" />
+    <meta name="ICBM" content="12.9716, 77.5946" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://crtechnologies.com/" />
-    <meta property="og:title" content="CR Technologies - Leading IT Solutions Provider" />
-    <meta property="og:description" content="Transform your business with cutting-edge IT solutions. Professional web development, mobile apps, cloud services, AI solutions, data analytics, and cybersecurity services." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop" />
+    <meta property="og:url" content="https://crtechnologies.vercel.app/" />
+    <meta property="og:title" content="CR Technologies - Premium IT Solutions & Digital Transformation" />
+    <meta property="og:description" content="Enterprise-grade IT solutions: Web Development, Mobile Apps, Cloud Services, AI/ML, Data Analytics & Cybersecurity. Trusted by 200+ clients. ISO 27001 certified." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop&q=80" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CR Technologies - Digital Innovation" />
+    <meta property="og:site_name" content="CR Technologies" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://crtechnologies.com/" />
-    <meta property="twitter:title" content="CR Technologies - Leading IT Solutions Provider" />
-    <meta property="twitter:description" content="Transform your business with cutting-edge IT solutions. Professional web development, mobile apps, cloud services, AI solutions, data analytics, and cybersecurity services." />
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@crtechnologies" />
+    <meta name="twitter:creator" content="@crtechnologies" />
+    <meta name="twitter:url" content="https://crtechnologies.vercel.app/" />
+    <meta name="twitter:title" content="CR Technologies - Premium IT Solutions" />
+    <meta name="twitter:description" content="Enterprise-grade IT solutions: Web, Mobile, Cloud, AI/ML, Data Analytics & Cybersecurity. 200+ clients. ISO 27001 certified." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop&q=80" />
     
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#2563eb" />
+    <!-- Theme Colors for different browsers -->
+    <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1e3a8a" media="(prefers-color-scheme: dark)" />
+    <meta name="msapplication-TileColor" content="#1e40af" />
+    <meta name="msapplication-navbutton-color" content="#1e40af" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     
-    <title>CR Technologies - Premium IT Solutions</title>
+    <title>CR Technologies | Premium IT Solutions & Digital Transformation</title>
     
-    <!-- Structured Data -->
+    <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "CR Technologies",
-      "url": "https://crtechnologies.com",
-      "logo": "https://crtechnologies.com/logo.png",
-      "description": "Leading IT solutions provider delivering innovative technology services to transform businesses worldwide",
+      "alternateName": "CR Tech",
+      "url": "https://crtechnologies.vercel.app",
+      "logo": "https://crtechnologies.vercel.app/logo.png",
+      "description": "Premium IT solutions provider delivering enterprise-grade web development, mobile apps, cloud services, AI/ML solutions, data analytics, and cybersecurity services worldwide.",
+      "foundingDate": "2010",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 50,
+        "maxValue": 100
+      },
+      "areaServed": "Worldwide",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Tech Street",
-        "addressLocality": "Silicon Valley",
-        "addressRegion": "CA",
-        "postalCode": "94000",
-        "addressCountry": "US"
+        "streetAddress": "123 Innovation Drive, Tech Park",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560001",
+        "addressCountry": "IN"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-234-567-890",
-        "contactType": "Customer Service",
-        "email": "info@crtechnologies.com"
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-22-1234-5678",
+          "contactType": "sales",
+          "email": "sales@crtechnologies.com",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-22-1234-5678",
+          "contactType": "customer support",
+          "email": "support@crtechnologies.com",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      ],
       "sameAs": [
         "https://www.facebook.com/crtechnologies",
         "https://www.twitter.com/crtechnologies",
-        "https://www.linkedin.com/company/crtechnologies",
-        "https://www.instagram.com/crtechnologies"
+        "https://www.linkedin.com/company/cr-technologies",
+        "https://www.instagram.com/crtechnologies",
+        "https://github.com/crtechnologies"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "ISO 27001 Certified"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "AWS Partner"
+        }
       ]
     }
     </script>
+    
+    <!-- Structured Data - WebSite for Search Box -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CR Technologies",
+      "url": "https://crtechnologies.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://crtechnologies.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "CR Technologies IT Services",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Innovation Drive, Tech Park",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560001",
+        "addressCountry": "IN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "200"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Development"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile App Development"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI/ML Solutions"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data Analytics"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity"}}
+        ]
+      }
+    }
+    </script>
+    <!-- Critical inline styles for instant paint -->
+    <style>
+      /* Critical CSS for initial render */
+      *,*::before,*::after{box-sizing:border-box}
+      html{-webkit-text-size-adjust:100%;line-height:1.5}
+      body{margin:0;font-family:'Inter','Plus Jakarta Sans',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+      #root{min-height:100vh}
+      /* Loading state */
+      .initial-loader{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:99999}
+      .loader-spinner{width:48px;height:48px;border:3px solid #e5e7eb;border-top-color:#3b82f6;border-radius:50%;animation:spin 0.8s linear infinite}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      /* Hide loader when app loads */
+      .app-loaded .initial-loader{opacity:0;pointer-events:none;transition:opacity 0.3s}
+    </style>
   </head>
-  <body>
+  <body class="font-sans">
+    <!-- Initial loading indicator -->
+    <div class="initial-loader" id="initial-loader">
+      <div class="loader-spinner"></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Hide loader after React mounts -->
+    <script>
+      window.addEventListener('load', function() {
+        document.body.classList.add('app-loaded');
+        setTimeout(function() {
+          var loader = document.getElementById('initial-loader');
+          if (loader) loader.remove();
+        }, 300);
+      });
+    </script>
+    
+    <!-- Noscript fallback -->
+    <noscript>
+      <div style="padding: 50px; text-align: center; font-family: sans-serif;">
+        <h1>CR Technologies</h1>
+        <p>Please enable JavaScript to view this website.</p>
+        <p>Contact us at: <a href="mailto:info@crtechnologies.com">info@crtechnologies.com</a></p>
+      </div>
+    </noscript>
   </body>
 </html>
 

@@ -52,11 +52,11 @@ const Privacy = () => {
   ]
 
   return (
-    <div className="relative overflow-hidden pt-20">
+    <div className="relative overflow-hidden pt-16 lg:pt-20">
       <SEO 
-        title="Privacy Policy"
-        description="CR Technologies Privacy Policy. Learn how we collect, use, and protect your personal information. Your privacy is important to us."
-        keywords="privacy policy, data protection, privacy, GDPR, data security"
+        title="Privacy Policy - CR Technologies"
+        description="CR Technologies Privacy Policy. Learn how we collect, use, and protect your personal information in compliance with GDPR, CCPA, and ISO standards."
+        keywords="privacy policy, CR Technologies, data protection, privacy, GDPR, data security, personal information"
       />
       
       {/* Animated Background */}
@@ -80,7 +80,7 @@ const Privacy = () => {
               Privacy <span className="text-gradient">Policy</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
+              Your privacy is important to us. We comply with GDPR, CCPA, and international data protection standards.
             </p>
             <p className="text-gray-500 mt-4">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
           </motion.div>
@@ -98,13 +98,14 @@ const Privacy = () => {
           >
             <h2 className="text-3xl font-bold mb-6">Introduction</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-4">
-              CR Technologies ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
-              explains how we collect, use, disclose, and safeguard your information when you visit our website or
-              use our services.
+              CR Technologies ("we," "our," or "us"), headquartered in Bangalore, India, is committed to protecting your privacy and ensuring transparency. 
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.
+              We comply with GDPR (General Data Protection Regulation), CCPA (California Consumer Privacy Act), and ISO 27001 data protection standards.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed">
               By using our website and services, you consent to the data practices described in this policy. If you
-              do not agree with the practices described in this policy, please do not use our services.
+              do not agree with the practices described in this policy, please do not use our services. If you have questions about this Privacy Policy, 
+              please contact us at legal@crtechnologies.com or +91 (22) 1234-5678.
             </p>
           </motion.div>
 

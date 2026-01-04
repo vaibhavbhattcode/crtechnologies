@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Code, Smartphone, Cloud, Brain, Database, Shield, CheckCircle, Star, Quote, TrendingUp } from 'lucide-react'
 import AnimatedShape from '../components/ui/AnimatedShape'
@@ -6,6 +8,24 @@ import Button from '../components/ui/Button'
 import SEO from '../components/SEO'
 
 const Home = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const [isClient, setIsClient] = useState(false) // Renamed for clarity
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches)
+
+    updatePreference()
+    mediaQuery.addEventListener('change', updatePreference)
+
+    return () => mediaQuery.removeEventListener('change', updatePreference)
+  }, [])
+
+  useEffect(() => {
+    // Mark as client-side hydrated
+    setIsClient(true)
+  }, [])
+
   const services = [
     {
       icon: Code,
@@ -69,30 +89,64 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp Inc.',
-      company: 'Fortune 500 Company',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face',
-      quote: 'CR Technologies transformed our digital infrastructure. Their expertise in cloud migration saved us 40% in operational costs.',
+      name: 'Ananya Iyer',
+      role: 'COO, FinNest Payments',
+      company: 'Bengaluru · Digital payments scale-up',
+      quote: 'CR Technologies stabilised our UPI stack before the festive rush. Checkout failures dropped by 62% and we crossed 8M daily transactions without downtime.',
       rating: 5,
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO, InnovateLabs',
-      company: 'Tech Startup',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-      quote: 'The mobile app they developed exceeded our expectations. User engagement increased by 300% in the first quarter.',
+      name: 'Rohan Mehta',
+      role: 'Head of Engineering, Swastik Retail',
+      company: 'Mumbai · Omni-channel retail',
+      quote: 'Their headless commerce rollout cut page loads to 1.3s and improved conversion by 28%. The team shipped every sprint on time.',
       rating: 5,
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Director, Global Solutions',
-      company: 'Enterprise Client',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      quote: 'Outstanding AI solutions that revolutionized our customer service. Response time improved by 85%.',
+      name: 'Priya Nambiar',
+      role: 'VP Technology, Vistara Logistics',
+      company: 'Delhi NCR · B2B logistics',
+      quote: 'The control-tower dashboard they built gives real-time lane visibility. SLA breaches are down 41% and on-time deliveries are up to 97%.',
+      rating: 5,
+    },
+    {
+      name: 'Arjun Kulkarni',
+      role: 'CTO, HealthBridge Clinics',
+      company: 'Pune · Healthcare network',
+      quote: 'Their HIPAA-ready data lake unified 120+ clinics. Claims processing time reduced from days to hours and analytics are now self-serve.',
+      rating: 5,
+    },
+    {
+      name: 'Neha Sinha',
+      role: 'Product Director, BharatRide Mobility',
+      company: 'Hyderabad · Mobility & EV',
+      quote: 'We launched our driver super-app in 12 weeks. Crash rates fell by 70% and app store rating improved from 3.6 to 4.5.',
+      rating: 5,
+    },
+    {
+      name: 'Karthik Narayanan',
+      role: 'Chief Data Officer, Shakti Insurance',
+      company: 'Chennai · InsurTech',
+      quote: 'CR Technologies productionised our pricing models with full observability. Quote TAT dropped to under 45 seconds and loss ratios improved.',
+      rating: 5,
+    },
+    {
+      name: 'Meera Deshpande',
+      role: 'CEO, Ujjwal Microfinance',
+      company: 'Ahmedabad · Financial inclusion',
+      quote: 'Their multilingual onboarding and eKYC stack increased rural activation by 33%. Support tickets reduced because the UX is genuinely intuitive.',
+      rating: 5,
+    },
+    {
+      name: 'Siddharth Rao',
+      role: 'Co-founder, Klassroom EdTech',
+      company: 'Bengaluru · EdTech',
+      quote: 'Live-class latency dropped below 200ms after their edge optimisation. Completion rates for our STEM courses jumped by 24%.',
       rating: 5,
     },
   ]
+
+  const marqueeTestimonials = [...testimonials, ...testimonials]
 
   const caseStudies = [
     {
@@ -161,9 +215,10 @@ const Home = () => {
   return (
     <div className="relative overflow-hidden">
       <SEO 
-        title="Home"
-        description="Transform your business with cutting-edge IT solutions. Professional web development, mobile apps, cloud services, AI solutions, data analytics, and cybersecurity services."
-        keywords="IT solutions, web development, mobile apps, cloud services, AI solutions, digital transformation"
+        title="Premium IT Solutions & Digital Transformation"
+        description="CR Technologies provides enterprise-grade web development, mobile apps, cloud services, AI/ML solutions, data analytics & cybersecurity. Trusted by 200+ clients worldwide. ISO 27001 certified."
+        keywords="web development company India, enterprise software development, app development services, IT solutions, digital transformation, cloud migration services, AI ML solutions"
+        url="/"
       />
       
       {/* Animated Background Shapes */}
@@ -174,67 +229,105 @@ const Home = () => {
       </div>
 
       {/* Hero Section with Image */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Background Image with Overlay - Full bleed */}
+        <div className="absolute inset-0 z-0 -top-20 lg:-top-24">
           <img 
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop" 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80" 
             alt="Modern technology workspace with digital transformation concept"
             className="w-full h-full object-cover"
             loading="eager"
             decoding="async"
           />
-          {/* Dark overlay with gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/50 to-gray-900/70"></div>
-          {/* Light overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/10"></div>
+          {/* Premium gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-blue-900/60 to-purple-900/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent"></div>
         </div>
         
-        <div className="container mx-auto text-center z-10 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <span className="text-white drop-shadow-2xl">Transforming Ideas</span>
-              <br />
-              <span className="text-white drop-shadow-2xl">Into Digital Reality</span>
-            </motion.h1>
-            <motion.p
-              className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Leading IT solutions provider delivering innovative technology services
-              to transform businesses worldwide
-            </motion.p>
+        <div className="container mx-auto relative z-10 pt-20 lg:pt-24">
+          <div className="max-w-5xl mx-auto text-center">
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
+              transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <Button to="/contact" variant="primary" className="text-lg px-8 py-4 shadow-2xl">
-                Get Started <ArrowRight className="inline ml-2 w-5 h-5" />
-              </Button>
-              <Button to="/services" variant="outline" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 shadow-xl">
-                Our Services
-              </Button>
+              {/* Trust Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-8 border border-white/20"
+              >
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span className="text-sm font-medium text-white/90">Trusted by 200+ enterprises worldwide</span>
+              </motion.div>
+
+              <motion.h1
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                <span className="text-white block">Transform Your Vision</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Into Digital Excellence</span>
+              </motion.h1>
+              
+              <motion.p
+                className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                Enterprise-grade IT solutions engineered for growth. From web & mobile development 
+                to AI-powered analytics — we deliver technology that drives results.
+              </motion.p>
+              
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                <Button to="/contact" variant="primary" size="lg" className="shadow-2xl shadow-blue-500/25">
+                  Start Your Project <ArrowRight className="inline ml-2 w-5 h-5" />
+                </Button>
+                <Button to="/portfolio" variant="outline" size="lg" className="bg-white/5 backdrop-blur-sm border-white/30 hover:bg-white/20">
+                  View Our Work
+                </Button>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
+          {/* Trust Badges */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16 flex flex-wrap justify-center items-center gap-6"
+          >
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md border border-gray-200">
+              <span className="text-2xl">🏆</span>
+              <span className="font-semibold text-gray-700">ISO 27001 Certified</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md border border-gray-200">
+              <span className="text-2xl">🔒</span>
+              <span className="font-semibold text-gray-700">SOC 2 Compliant</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md border border-gray-200">
+              <span className="text-2xl">☁️</span>
+              <span className="font-semibold text-gray-700">AWS & Google Cloud Partner</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md border border-gray-200">
+              <span className="text-2xl">✅</span>
+              <span className="font-semibold text-gray-700">GDPR Compliant</span>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -242,7 +335,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
-                transition={{ delay: index * 0.05, duration: 0.3, ease: 'easeOut' }}
+                transition={{ delay: index * 0.03, duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
@@ -310,9 +403,9 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Why Choose <span className="text-yellow-300">CR Technologies?</span>
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Why Choose <span className="text-yellow-300">CR Technologies?</span>
+            </h2>
               <p className="text-xl mb-8 text-blue-100">
                 We combine innovation, expertise, and dedication to deliver
                 exceptional results that drive your business forward.
@@ -369,8 +462,8 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto">
+      <section className="py-20 bg-gray-50 overflow-hidden">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -381,44 +474,54 @@ const Home = () => {
               What Our <span className="text-gradient">Clients Say</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Trusted by leading companies worldwide
+              Trusted by leading Indian enterprises & high-growth startups
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        </div>
+        
+        {/* Full-width marquee container */}
+        <div className="relative w-full">
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-gray-50 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-gray-50 to-transparent z-10" />
+          
+          <Marquee
+            speed={50}
+            gradient={false}
+            className="py-4"
+            autoFill={true}
+          >
             {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ delay: index * 0.05, duration: 0.3, ease: 'easeOut' }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all"
+              <div
+                key={`${testimonial.name}-${index}`}
+                className="mx-4 w-[360px] bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100/80"
               >
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="w-8 h-8 text-blue-600/80" />
                 </div>
-                <Quote className="w-8 h-8 text-blue-600 mb-4" />
-                <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
-                <div className="flex items-center space-x-4">
-                    <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div>
-                    <p className="font-bold">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                    <p className="text-xs text-gray-500">{testimonial.company}</p>
+                <p className="text-gray-700 mb-6 leading-relaxed min-h-[80px]">"{testimonial.quote}"</p>
+                <div className="flex items-start gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 text-white flex items-center justify-center font-semibold shadow-md">
+                    {testimonial.name
+                      .split(' ')
+                      .map((n) => n[0])
+                      .join('')
+                      .slice(0, 2)
+                      .toUpperCase()}
+                  </div>
+                  <div className="space-y-1">
+                    <p className="font-bold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600 leading-tight">{testimonial.role}</p>
+                    <p className="text-xs text-gray-500 leading-tight">{testimonial.company}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </div>
+          </Marquee>
         </div>
       </section>
 
@@ -529,12 +632,10 @@ const Home = () => {
                       })
                     }}
                     onError={(e) => {
-                      // Try alternate logo for AWS if main one fails
                       if (tech.name === 'AWS' && tech.altLogo && e.target.src !== tech.altLogo) {
                         e.target.src = tech.altLogo;
                         return;
                       }
-                      // Fallback if image fails to load
                       const parent = e.target.parentElement;
                       parent.innerHTML = `<div class="${tech.logoColor} font-bold text-2xl">${tech.name.charAt(0)}</div>`;
                     }}
@@ -580,4 +681,3 @@ const Home = () => {
 }
 
 export default Home
-

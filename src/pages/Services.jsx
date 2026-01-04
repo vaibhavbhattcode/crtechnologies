@@ -81,11 +81,12 @@ const Services = () => {
   ]
 
   return (
-    <div className="relative overflow-hidden pt-20">
+    <div className="relative overflow-x-hidden pt-16 md:pt-20 w-full bg-white">
       <SEO 
-        title="Our Services"
-        description="Comprehensive IT solutions: Web development, mobile apps, cloud services, AI solutions, data analytics, and cybersecurity. Transform your business with our expert services."
-        keywords="IT services, web development services, mobile app services, cloud services, AI services, data analytics services, cybersecurity services"
+        title="IT Services - Web, Mobile, Cloud, AI & Cybersecurity"
+        description="Comprehensive enterprise IT services: Web Development, Mobile Apps, Cloud Migration, AI/ML Solutions, Data Analytics & Cybersecurity. Custom solutions for business growth."
+        keywords="IT services India, enterprise software development, web development services, mobile app development company, cloud migration services, AI ML solutions, cybersecurity services Bangalore"
+        url="/services"
       />
       
       {/* Animated Background */}
@@ -96,7 +97,7 @@ const Services = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center px-4 z-10">
+      <section className="relative min-h-[60vh] flex items-center justify-center px-4 pt-24 md:pt-20 z-10">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

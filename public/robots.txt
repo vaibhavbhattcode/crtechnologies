@@ -1,0 +1,15 @@
+# CR Technologies - robots.txt
+# Allow all bots to crawl the website
+
+User-agent: *
+Allow: /
+
+# Disallow private pages (if any)
+Disallow: /admin
+Disallow: /api
+
+# Crawl delay for resource optimization
+Crawl-delay: 1
+
+# Sitemap location - CRITICAL for Google indexing
+Sitemap: https://crtechnologies.vercel.app/sitemap.xml

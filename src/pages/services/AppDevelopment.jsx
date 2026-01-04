@@ -84,7 +84,7 @@ const AppDevelopment = () => {
   ]
 
   return (
-    <div className="relative overflow-hidden pt-20">
+    <div className="relative overflow-x-hidden pt-16 md:pt-20 w-full bg-white">
       <SEO 
         title="Mobile App Development Services"
         description="Professional mobile app development for iOS and Android. Native and cross-platform apps using React Native, Flutter, Swift, and Kotlin."
