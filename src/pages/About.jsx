@@ -75,18 +75,18 @@ const About = () => {
       expertise: ['Full-Stack Development', 'React & Node.js', 'Scalable Architecture', 'Team Leadership', 'Agile Methodology', 'Code Quality & DevEx']
     },
     { 
-      name: 'Priya Sharma', 
-      role: 'VP of Product & Innovation', 
-      image: '👩‍💼',
-      bio: 'Product strategy expert with 14 years at leading tech companies including Google and Microsoft. MTech from IISc Bangalore, Priya drives product vision and innovation initiatives across CR Technologies.',
-      expertise: ['Product Management', 'User Experience Design', 'Market Research', 'Innovation Strategy', 'Agile Product Development']
+      name: 'Abhishek Surati', 
+      role: 'Flutter App Developer', 
+      image: '👨‍💻',
+      bio: 'Experienced Flutter developer specializing in cross-platform mobile app development. Abhishek has delivered 30+ high-performance apps for startups and enterprises. Holds a B.Tech in Computer Engineering and is passionate about UI/UX and scalable mobile solutions.',
+      expertise: ['Flutter', 'Dart', 'Mobile App Development', 'UI/UX Design', 'Firebase', 'REST APIs', 'App Deployment']
     },
     { 
-      name: 'Rajesh Kumar', 
-      role: 'VP of Sales & Partnerships', 
+      name: 'Vagendra Rawal', 
+      role: 'Business Development Executive', 
       image: '👨‍💼',
-      bio: 'Enterprise sales veteran with 17+ years closing deals with Fortune 500 companies. Based in New York with offices in London and Singapore, Rajesh leads global business development and strategic partnerships.',
-      expertise: ['Enterprise Sales', 'Strategic Partnerships', 'Account Management', 'Business Development', 'Sales Strategy']
+      bio: 'Dynamic BDE with a strong background in business development and client relationship management. Vagendra specializes in identifying new business opportunities, building strategic partnerships, and driving revenue growth for tech companies.',
+      expertise: ['Business Development', 'Client Relations', 'Lead Generation', 'Sales Strategy', 'Market Research']
     },
     { 
       name: 'Dr. Arun Kapoor', 

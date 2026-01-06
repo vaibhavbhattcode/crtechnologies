@@ -33,8 +33,8 @@ const Footer = memo(() => {
   const socialLinks = useMemo(() => [
     { icon: Facebook, href: 'https://facebook.com/crtechnologies', label: 'Facebook', color: 'hover:bg-blue-600' },
     { icon: Twitter, href: 'https://twitter.com/crtechnologies', label: 'Twitter', color: 'hover:bg-sky-500' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/cr-technologies', label: 'LinkedIn', color: 'hover:bg-blue-700' },
-    { icon: Instagram, href: 'https://instagram.com/crtechnologies', label: 'Instagram', color: 'hover:bg-pink-600' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/cr-technologies1/', label: 'LinkedIn', color: 'hover:bg-blue-700' },
+    { icon: Instagram, href: 'https://www.instagram.com/cr_technologies_04/', label: 'Instagram', color: 'hover:bg-pink-600' },
   ], [])
 
   const achievements = useMemo(() => [
@@ -248,16 +248,16 @@ const Footer = memo(() => {
                 <div className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600/20 transition-colors">
                   <Phone className="w-5 h-5 text-blue-400" />
                 </div>
-                <a href="tel:+912212345678" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  +91 (22) 1234-5678
+                <a href="tel:+918320810061" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  +91 832 081 0061
                 </a>
               </li>
               <li className="flex items-center space-x-3 group">
                 <div className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600/20 transition-colors">
                   <Mail className="w-5 h-5 text-blue-400" />
                 </div>
-                <a href="mailto:contact@crtechnologies.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  contact@crtechnologies.com
+                <a href="mailto:crtechnologies24@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  crtechnologies24@gmail.com
                 </a>
               </li>
             </ul>

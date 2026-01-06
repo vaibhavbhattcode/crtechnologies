@@ -215,9 +215,9 @@ const Home = () => {
   return (
     <div className="relative overflow-hidden">
       <SEO 
-        title="Premium IT Solutions & Digital Transformation"
-        description="CR Technologies provides enterprise-grade web development, mobile apps, cloud services, AI/ML solutions, data analytics & cybersecurity. Trusted by 200+ clients worldwide. ISO 27001 certified."
-        keywords="web development company India, enterprise software development, app development services, IT solutions, digital transformation, cloud migration services, AI ML solutions"
+        title="Global IT Solutions & Digital Transformation Worldwide"
+        description="CR Technologies: Global IT solutions provider serving clients worldwide from India. Enterprise web development, mobile apps, cloud services, AI/ML, data analytics & cybersecurity. 200+ international clients across USA, UK, Canada, Australia, UAE. ISO 27001 certified."
+        keywords="global IT solutions, international web development, enterprise software development worldwide, offshore development India, IT outsourcing, cloud migration services worldwide, AI ML solutions, data analytics international, cybersecurity services global, digital transformation, React development, Node.js experts, AWS partners"
         url="/"
       />
       
@@ -583,6 +583,184 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* About Our Services - SEO Content Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Global IT Solutions for Modern Businesses
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              CR Technologies is a <strong>global IT solutions provider with offices in Surat and Ahmedabad, India</strong>, delivering enterprise-grade 
+              technology services to businesses worldwide. With over 15 years of international experience and 200+ clients across 
+              North America, Europe, Asia, and beyond, we specialize in transforming businesses through innovative technology solutions.
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {/* Service Overview Cards */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Web Development Services</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our <strong>enterprise web development services</strong> delivered from our offices in Surat and Ahmedabad serve clients worldwide, 
+                focusing on creating responsive, user-friendly websites that drive business growth. We build modern web applications using React, Node.js, and other cutting-edge 
+                technologies, ensuring your site ranks well in search engines globally and delivers exceptional user experiences.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ Responsive web design optimized for all devices</li>
+                <li>✓ SEO-friendly architecture for better Google rankings</li>
+                <li>✓ Fast-loading sites that improve user engagement</li>
+                <li>✓ E-commerce platforms and custom web applications</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">International Mobile App Development</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We develop <strong>mobile app solutions for global markets</strong>, serving clients across iOS and Android platforms worldwide. 
+                Our international team creates engaging apps that connect you with customers globally. Our mobile-first approach ensures your 
+                application works seamlessly across all devices and markets, optimized for international app stores and search rankings.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ Native iOS and Android app development</li>
+                <li>✓ Cross-platform solutions with React Native and Flutter</li>
+                <li>✓ User-centric design and intuitive interfaces</li>
+                <li>✓ App store optimization and performance monitoring</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Cloud Services & Digital Transformation</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our <strong>enterprise cloud migration and management services</strong> help businesses worldwide scale efficiently. We provide 
+                AWS, Azure, and Google Cloud expertise with 24/7 global support, enabling you to modernize your infrastructure across multiple 
+                regions while reducing costs and improving reliability for international operations.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ Cloud migration with zero downtime</li>
+                <li>✓ AWS, Azure, and Google Cloud expertise</li>
+                <li>✓ Infrastructure optimization and cost reduction</li>
+                <li>✓ DevOps practices and CI/CD pipelines</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI & Machine Learning Solutions</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We implement <strong>AI and machine learning solutions</strong> that help businesses make data-driven decisions. 
+                From predictive analytics to natural language processing, we build intelligent systems that drive innovation 
+                and competitive advantage.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ Predictive analytics and business intelligence</li>
+                <li>✓ Machine learning model development and deployment</li>
+                <li>✓ Computer vision and image recognition</li>
+                <li>✓ Natural language processing applications</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 border border-indigo-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Data Analytics & Business Intelligence</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our <strong>data analytics services</strong> transform raw data into actionable insights. We help businesses 
+                understand customer behavior, optimize operations, and identify new growth opportunities through advanced 
+                analytics and visualization tools.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ Data warehouse design and implementation</li>
+                <li>✓ Business intelligence dashboards</li>
+                <li>✓ Advanced analytics and reporting</li>
+                <li>✓ Data visualization and storytelling</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 border border-red-100"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Cybersecurity & Data Protection</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We provide comprehensive <strong>cybersecurity services</strong> to protect your business from evolving threats. 
+                Our ISO 27001 certified team implements security best practices, conducts audits, and ensures compliance with 
+                industry standards.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ Security assessments and penetration testing</li>
+                <li>✓ ISO 27001 compliance and certifications</li>
+                <li>✓ Incident response and threat management</li>
+                <li>✓ Employee security training and awareness</li>
+              </ul>
+            </motion.div>
+          </div>
+
+          {/* Why Choose CR Technologies */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 pt-12 border-t border-gray-200"
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose CR Technologies?</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-5xl font-bold text-blue-600 mb-2">500+</div>
+                <p className="text-gray-700"><strong>Projects Successfully Delivered</strong> across various industries</p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-green-600 mb-2">200+</div>
+                <p className="text-gray-700"><strong>Happy Clients Worldwide</strong> trusting our expertise</p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-purple-600 mb-2">15+</div>
+                <p className="text-gray-700"><strong>Years of Experience</strong> in IT solutions and innovation</p>
+              </div>
+            </div>
+            <p className="text-center text-gray-700 mt-8 leading-relaxed text-lg">
+              As a <strong>global technology partner with headquarters in India (Surat and Ahmedabad)</strong>, we combine technical expertise with business acumen 
+              to deliver solutions that create real value worldwide. Whether you're looking for enterprise web development, mobile app solutions, 
+              cloud services, or AI/ML implementation anywhere in the world, CR Technologies is your trusted partner for digital transformation and international business growth.
+            </p>
+          </motion.div>
         </div>
       </section>
 

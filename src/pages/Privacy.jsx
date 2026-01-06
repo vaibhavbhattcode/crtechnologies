@@ -105,7 +105,7 @@ const Privacy = () => {
             <p className="text-gray-600 text-lg leading-relaxed">
               By using our website and services, you consent to the data practices described in this policy. If you
               do not agree with the practices described in this policy, please do not use our services. If you have questions about this Privacy Policy, 
-              please contact us at legal@crtechnologies.com or +91 (22) 1234-5678.
+              please contact us at crtechnologies24@gmail.com or +91 832 081 0061.
             </p>
           </motion.div>
 
@@ -194,7 +194,7 @@ const Privacy = () => {
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="space-y-2 text-blue-100">
-                <p><strong>Email:</strong> privacy@crtechnologies.com</p>
+                <p><strong>Email:</strong> crtechnologies24@gmail.com</p>
                 <p><strong>Phone:</strong> +1 (234) 567-890</p>
                 <p><strong>Address:</strong> 123 Tech Street, Silicon Valley, CA 94000</p>
               </div>

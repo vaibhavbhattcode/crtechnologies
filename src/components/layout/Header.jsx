@@ -434,7 +434,7 @@ const Header = memo(() => {
                 
                 <div className="flex items-center justify-center gap-4 mt-4">
                   <a 
-                    href="tel:+912212345678" 
+                    href="tel:+918320810061" 
                     className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
                   >
                     <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm">
@@ -443,7 +443,7 @@ const Header = memo(() => {
                     <span className="font-medium">Call</span>
                   </a>
                   <a 
-                    href="mailto:contact@crtechnologies.com" 
+                    href="mailto:crtechnologies24@gmail.com" 
                     className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
                   >
                     <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm">

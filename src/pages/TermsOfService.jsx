@@ -170,8 +170,8 @@ const TermsOfService = () => {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <ul className="space-y-2 text-gray-700">
-                <li>📧 Email: <a href="mailto:legal@crtechnologies.com" className="text-blue-600 hover:underline">legal@crtechnologies.com</a></li>
-                <li>📞 Phone: +91 (22) 1234-5678</li>
+                <li>📧 Email: <a href="mailto:crtechnologies24@gmail.com" className="text-blue-600 hover:underline">crtechnologies24@gmail.com</a></li>
+                <li>📞 Phone: +91 832 081 0061</li>
                 <li>📍 Address: Mumbai, Maharashtra, India</li>
               </ul>
             </div>

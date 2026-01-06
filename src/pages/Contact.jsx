@@ -54,14 +54,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+91 (22) 1234-5678',
+      content: '+91 832 081 0061',
       details: 'Monday to Friday, 9 AM - 6 PM IST',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'contact@crtechnologies.com',
+      content: 'crtechnologies24@gmail.com',
       details: 'We respond within 24 hours',
       color: 'from-green-500 to-emerald-500',
     },
@@ -176,7 +176,7 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
-                          placeholder="john@company.com"
+                          placeholder="crtechnologies24@gmail.com"
                         />
                       </div>
                     </div>
@@ -204,7 +204,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 832 081 0061"
                         />
                       </div>
                     </div>
